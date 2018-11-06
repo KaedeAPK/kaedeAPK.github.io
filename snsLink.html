@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>SNS LINKS</title>
+    <style>
+        canvas { background: rgb(94, 94, 94);
+                width: 100%; height: 100%;}
+        body {margin: 0;}
+    </style>
+
 </head>
 <body>
-        <a href="https://kaedeapk.github.io/">
-            <button>Back to Home</button></a>
+    <a href="https://kaedeapk.github.io/">
+    <button>Back to Home</button></a>
+</body>
+    <canvas></canvas>
+<script>
+  // Up dated 11/02
+    // Background: glay by CSS
+    // This is Canvas Grid Line for drawing
+
+    // Lightgreen by every 500px line
+    // white line by 100px line
+    // glay by 50px.
+    
+    var canvas = document.querySelector('canvas');
+    var endX = canvas.width = window.innerWidth;
+    var endY = canvas.height = window.innerHeight;
+    var c = canvas.getContext('2d');
+    var midX = endX/2;
+    var midY = endY/2;
+  
+    function gridLine() {
+        c.lineWidth = 1;
+        function strokeGrid() {
+            c.beginPath();
+            c.moveTo(i*50, 0);
+            c.lineTo(i*50, 1000);
+            c.moveTo(0, i*50);
+            c.lineTo(2000, i*50);
+            c.stroke();
+        }
+
+       
+        for (i = 0; i < 500; i ++) {
+            // 0から50ごとに2500まで実行, 500回.
+            if (i % 10 == 0){
+                c.strokeStyle = '#90ee90';
+                strokeGrid();
+            }
+            else if (i % 2 == 1){
+                c.strokeStyle = '#999';
+                strokeGrid();
+            }
+            else if (i % 2 == 0) {
+                c.strokeStyle = '#fff';
+                strokeGrid();
+            }
+        }
+    }
+    gridLine();
+  
+    function drawCircle(x, y, r, color) {
+        c.beginPath();
+        c.arc(x, y, r, 0, 2*Math.PI, false);
+        c.fillStyle = color;
+        c.fill();
+    }
+//drawCircle(midX,midY,midY*.2,'#bb0');
+    c.beginPath();
+    c.fillStyle = "#44f";
+    c.fillRect(0,0,midX,midY);
+    c.fillStyle = "#c0c";
+    c.fillRect(midX,0,midX,midY);
+    c.fillStyle = "#0c0";
+    c.fillRect(0,midY,midX,midY);
+    c.fillStyle = "#09f";
+    c.fillRect(midX,midY,midX,midY);
+
+    c.beginPath();
+    c.fillStyle='#fff';
+    c.textAlign = 'center';
+    c.font = midX/3 + "px fantasy";
+
+    c.fillText("LINE",midX/2,endY*.9,midX);
+    c.fillText("Twitter",midX*1.5,endY*.9,midX);
+    c.fillText("FB",midX/2,midY*.75,midX);
+    c.fillText("INSTA",midX*1.5,midY*.75,midX);
+    
+</script>
 </body>
 </html>
