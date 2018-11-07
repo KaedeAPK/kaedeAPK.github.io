@@ -2,40 +2,74 @@
 <html lang="en">
 <head>
     <style>
+        h1 {
+            color: #000;
+            text-align: center;
+            font-size: 32px;
+
+            
+        }
+        h2 {
+            border-left: 4px solid blue;
+            background: lightblue;            
+        }
+
+        p {
+            font-family: Verdana;
+            
+        }
+
         ul {
             line-height: 2.5em;
             display: flex;
             align-items: center;
             justify-content: space-around;
             list-style-type: none;
-
         }
-        li {
+
+        li a {
             border: 1px solid;
             background: #808;
+            font-size: 33px;
+            padding: 15px 30px;
         }
+
         body {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #f4f4f4;
-            color: #555555;
+            padding: 0;
+            background-color: #333;
+            color: #555;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 100%;
             font-weight: normal;
             line-height: 1em;
         }
+
         a {
             text-decoration: none;
             color: #fff;
         }
         a:hover {
-            color: red;
+            background: #fff;
+            color: #000;
+
         }
         .container {
             border: 1px #ccc solid;
             padding: 10px;
             border-radius: 15px;
             background-color: aquamarine;
+        }
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 23px;
         }
     </style>
     <meta charset="UTF-8">
@@ -53,10 +87,11 @@
     </nav>
     <a href="https://github.com/KaedeAPK?tab=repositories"
         title="GitHub - kaedeAPK">
-        <button>Go to repositories</button></a>
+        <button class="btn">See repositories</button></a>
         <a href="https://kaedeAPK.github.io/snsLink.html">
-            <button>Go to SNS link</button></a>
+            <button class="btn">Go to SNS link</button></a>
     <div class="container">
+    <article id="article">
         <h1>Who am I</h1>
         <p>English Major student lives in Kanagawa. 2nd grade.</p>
         <p>Learning coding by myself, like HTML5, JavaScript. Loves Canvas.</p>
@@ -66,6 +101,7 @@
         <p>Visit my hatena blog, then you can see what I did</p>
         <h2>Skill Sets</h2>
         <p>git, HTML5 Canvas, JavaScript, TOEIC620, Speaking English</p>
+    </article>
     </div>
 
 
