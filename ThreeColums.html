@@ -14,7 +14,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 12%;
+    width: 25%;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
@@ -38,18 +38,22 @@ li a:hover:not(.active) {
     color: white;
 }
 main {
-    margin-left:12%;
+    margin-left:25%;
     margin-right: 25%;
     padding:1px 16px;
     height:1000px;
 }
-/* .rightSide {
+ .rightSide {
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
-    float:right;
-} */
+    margin-left: 75%;
+}
+.rightSide {
+    background-color: lightblue;
+    color: white;
+}
 </style>
 </head>
 <body>
@@ -59,19 +63,23 @@ main {
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
-<!-- </ul>
-<ul class="rightSide">
-    <li>game1</li>
-    <li>game2</li>
-    <li>game3</li>
-    <li>game4</li>
-    <li>Coming Soon...</li> -->
+  <li><a href="#article">Article01</a></li>
+  <li><a href="#article">Article02</a></li>
 </ul>
+ 
+<ul class="rightSide">
+    <li><a href=#>Game0</a></li>
+    <li><a href=#>Game1</a></li>
+    <li><a href=#>Game2</a></li>
+    <li><a href=#>Game3</a></li>
+    <li>Coming Soon...</li>
+</ul>
+
 <main>
 
   <h2>Fixed Full-height Side Nav</h2>
   <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
-  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+  <p>Notice that this div element has a <b> and right margin of 25%.</b> This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
   <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
   <p>Some text..</p>
   <p>Some text..</p>
