@@ -1,20 +1,46 @@
 # CSS Reference
+
+## Unit of the Char
+    px : 1px;
+    pt : 1.33px;
+    em : 
+        default 16px.
+        1.2em: x1.2 of parent element.
+        same as '%'.
+    rem: 
+        1 rem is same as root element font-size.
+        
+
+
 ## body
     max-width: 800px;
-    margin: 0 auto;
+    margin: N% auto;
+    // automaticaly centeralise N% window width.
 
 ## bottun
     // id="btn"
     background-color: #4CAF50;
     border: none;
     color: white;
+    // Char Color
     padding: 15px 32px;
+    // 
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+
+## OVER FLOW
+    overflow: hidden;
+    // can't see anything over the container.
+    visible;
+    // can see, but out of the border.
+    auto;
+    // make scroll var!
+
+
 ## a
     a {
         text-decoration: none;
