@@ -81,3 +81,9 @@ a:hover {
     height: 100%;
     overflow: auto;
 } */
+.article {
+        border: 1px #ccc solid;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: aquamarine;
+}
