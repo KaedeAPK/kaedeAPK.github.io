@@ -1,11 +1,14 @@
 body {
+    font-size: 24px;
     margin: 0;
 }
 
 h2 {
     background: lightgreen;
 }
-
+h3 {
+    border-bottom: 2px solid #f00;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -40,6 +43,7 @@ main {
     height:1000px;
 }
 .rightSide {
+    font-size: 1.5rem;
     display: block;
     color: #000;
     padding: 8px 16px;
@@ -48,6 +52,18 @@ main {
     background-color: lightblue;
     color: white;
 }
+.leftSide {
+    font-size: 1.5rem;
+}
 .gameTitle {
     background: #fff;
+}
+.rightSide {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-left: 75%;
+    background-color: lightblue;
+    color: white;
 }
