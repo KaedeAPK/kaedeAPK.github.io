@@ -10,33 +10,28 @@
     header {
         margin-left:17%;
         margin-top: 2%;
-
         width: auto;
     }
-    #logo {
-        margin-left: 1%;
-        margin-top: -6.5%;
+    
+    header > .logo {
+        margin-left: -20%;
         text-align: center;
         background: #fff;
-        font-size:150%; /*フォントサイズの調整*/
-        color:#313131; /*文字色の変更*/
-
+        font-size:150%;
+        color:#313131; 
         padding:10px 1.5%;
-
-        border:1px solid #313131; /*文字の周りに線を描く*/
-        border-radius: 5px; /*線の角に丸みを付ける*/
-        letter-spacing: 3px; /*文字と文字の間隔をあける*/
-        font-weight:600; /*文字の太さの変更*/
+        border:1px solid #313131;
+        border-radius: 5px; 
+        letter-spacing: 3px;
+        font-weight:600;
         width: 100px;
-    }
+    } 
     
     
     button {
         /* btnに適用されてない */
         margin: 0 5px 40px;
         padding: 1em 2em;
-        border: #313131;
-        color: #000;
         /* 横並び */
         display: inline-block;
         background-color: #fff;
@@ -68,18 +63,18 @@
         color: #111;
         width: 77%;
         padding: 0.2% 2%;
-
+        font-weight: 600;
     }
-    #d2 {
-        /* 適用されない */
-        border-bottom: #f00;
-        border-width: 20px;
+    article > #dd {
+        border: solid #66f;
     }
     
     </style>
 </head>
 <body>
+<div class="wrapper">
     <header>
+        <botton class="logo">KAEDE SITE</botton>
         <a href="https://github.com/KaedeAPK?tab=repositories"
         title="GitHub - kaedeAPK"><button class="btnB">GITHUB</button></a>
         <a href="mailto:curiosity.yg57@gmail.com"><button class="btnB">CONTACT</button></a>
@@ -88,31 +83,31 @@
         <a href="https://kaedeAPK.github.io/Canvas/Shooting.html">
         <button class="btnB">KAEDE GAMES</button></a>
     </header>
-    <h1 id="logo">KAEDE SITE</h1>
     <article>
         <div id="1">
-            <h2>Introduction</h2>
+            <h2 class="dd">Introduction</h2>
             <ul>僕のウェブサイトへようこそ。このページではGitHubレポジトリへのリンクや</ul>
-            <ul>GitHubへのリンク、KAEDE GAMESへのご案内などと</ul>
+            <ul>技術ブログへのリンク、KAEDE GAMESへのご案内などと</ul>
             <ul>僕のできることと、やってきた事のポートフォリオを兼ねています。</ul>
         </div>
         <div id="d2">
-            <h2>Introduce Myself</h2>
+            <h2 class="dd">Introduce Myself</h2>
             <ul>Kangawa University 2nd Grade, English(US culture Major)</ul>
             <ul>プログラミングは完全に独学で、HTMLをはじめとしたWeb系をメインで勉強しています。</ul>
             <ul>インターンでコードを書いてお金をもらえるようになるのが目標です。</ul>
         </div>
         <div id="d3">
-            <h2>Trying</h2>
+            <h2 class="dd">Trying</h2>
             <ul>ここのウェブサイトのデザインや、CanvasでのKAEDE GAMESの発展や増産など</ul>
             <ul>jQueryやNuxt.jsなどのフレームワークへの挑戦</ul>
             <ul>技術ブログの執筆、質問サイトへの投稿(teratailなど) </ul>
         </div>
-        <div id="d4">
-            <h2>SKILL SETS</h2>
-            <ul>HTML5, JavaScript, jQuery, Nuxt.js, Java, TOEIC:620.</ul>
+        <div class="d4">
+            <h2 class="dd">SKILL SETS</h2>
+            <ul>HTML5, CSS3, JavaScript, jQuery, Nuxt.js, Java, TOEIC:620.</ul>
         </div>
 
     </article>
+</div>
 </body>
 </html>
