@@ -1,4 +1,5 @@
 # kaedeAPK.github.io
+
 ## Student Elementary Devoloper
 * KU English-US Culture Major
     * writing HTML, JS, Canvas
@@ -10,6 +11,11 @@
 
 ## What I want to make
 * Nice web simple games
+* waku waku hakoniwa games
 * lifehacking web tools
-* fun android games
+* waku waku animation
+
+# Language
+* Python, JavaScript, HTML5, CSS
+
 

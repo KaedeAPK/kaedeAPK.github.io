@@ -1,113 +1,96 @@
-<!DOCTYPE html>
-<html>
+<!-- Learn about this code on 
+MDN: https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout -->
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>KAEDE SITE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    
-    header {
-        margin-left:17%;
-        margin-top: 2%;
-        width: auto;
-    }
-    
-    header > .logo {
-        margin-left: -20%;
-        text-align: center;
-        background: #fff;
-        font-size:150%;
-        color:#313131; 
-        padding:10px 1.5%;
-        border:1px solid #313131;
-        border-radius: 5px; 
-        letter-spacing: 3px;
-        font-weight:600;
-        width: 100px;
-    } 
-    
-    
-    button {
-        /* btnに適用されてない */
-        margin: 0 5px 40px;
-        padding: 1em 2em;
-        /* 横並び */
-        display: inline-block;
-        background-color: #fff;
-        /* 下に影を6px */
-        box-shadow: 0 6px #aaa;
-        
-        font-size: 114%;
-        line-height: 1;
-        position: relative;
-        /* 乗ってる時にカーソルを指に */
-        cursor: pointer;
-    }
-    .btnB {
-        border-radius: 15px;
-        box-shadow: 0 6px #aaa;
+    <title>Grid04</title>
+    <style>
+        /* bdrやpaddingに関係なくぴったり合わせる */
+        * {
+            box-sizing: border-box;
+            background: #000;
+            color: #fff;
+            font-size: 1.2em;
+        }
+        .wrapper { 
+            padding: 1em;
+            display: grid; 
+            grid-template-columns: 
+                repeat(3, 1fr); 
+            grid-auto-rows: 100px;
+            grid-gap: 32px;
+            
         } 
-    .btnB:hover {
-        box-shadow: 0 0px #aaa;
-        /* #4063A4 */
-        top: 6px;
-    }
-    body {
-        background-color: #ddd;
-    }
-    article {
-        margin:auto;
-        margin-top: 0%;
-        background: #aaaaaa;
-        color: #111;
-        width: 77%;
-        padding: 0.2% 2%;
-        font-weight: 600;
-    }
-    article > #dd {
-        border: solid #66f;
-    }
+        .wrapper {
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #002D26;
+        }
     
-    </style>
-</head>
-<body>
-<div class="wrapper">
-    <header>
-        <botton class="logo">KAEDE SITE</botton>
-        <a href="https://github.com/KaedeAPK?tab=repositories"
-        title="GitHub - kaedeAPK"><button class="btnB">GITHUB</button></a>
-        <a href="mailto:curiosity.yg57@gmail.com"><button class="btnB">CONTACT</button></a>
-        <a href="https://kei-s-lifehack.hatenablog.com/">
-        <button class="btnB">BLOG</button></a>
-        <a href="https://kaedeAPK.github.io/Canvas/Shooting.html">
-        <button class="btnB">KAEDE GAMES</button></a>
-    </header>
-    <article>
-        <div id="1">
-            <h2 class="dd">Introduction</h2>
-            <ul>僕のウェブサイトへようこそ。このページではGitHubレポジトリへのリンクや</ul>
-            <ul>技術ブログへのリンク、KAEDE GAMESへのご案内などと</ul>
-            <ul>僕のできることと、やってきた事のポートフォリオを兼ねています。</ul>
-        </div>
-        <div id="d2">
-            <h2 class="dd">Introduce Myself</h2>
-            <ul>Kangawa University 2nd Grade, English(US culture Major)</ul>
-            <ul>プログラミングは完全に独学で、HTMLをはじめとしたWeb系をメインで勉強しています。</ul>
-            <ul>インターンでコードを書いてお金をもらえるようになるのが目標です。</ul>
-        </div>
-        <div id="d3">
-            <h2 class="dd">Trying</h2>
-            <ul>ここのウェブサイトのデザインや、CanvasでのKAEDE GAMESの発展や増産など</ul>
-            <ul>jQueryやNuxt.jsなどのフレームワークへの挑戦</ul>
-            <ul>技術ブログの執筆、質問サイトへの投稿(teratailなど) </ul>
-        </div>
-        <div class="d4">
-            <h2 class="dd">SKILL SETS</h2>
-            <ul>HTML5, CSS3, JavaScript, jQuery, Nuxt.js, Java, TOEIC:620.</ul>
-        </div>
+        .wrapper > div {
+            /* border: 2px solid #ffa94d; */
+            border-radius: 5px;
+            /* background-color: #ffd8a8; */
+            padding: 1em;
+            /* color: #d9480f; */
+        }
+        .wrapper:hover {
+            box-shadow: 0 0px #d94;
+        }
+    
+        .box1 { 
+            grid-column:1/4;
+            grid-row:1/3;
+            background: #E65119;
+            text-align: center;
+            font-size: 250%;
+        }   
+        .box2 { 
+            grid-column:1/2; 
+            grid-row: 3/5; 
+            background: #0992A5;
 
-    </article>
-</div>
-</body>
-</html>
+        }
+        .box3 { 
+            grid-column:2/4;
+            grid-row: 3/5;
+            background: #FF9505;
+        }
+        .box4 { 
+            grid-column:1/3;
+            grid-row: 5/6;
+            background: #0270BB;
+            
+        }
+        .box5 { 
+            grid-column:3/4;
+            grid-row: auto;
+            background: #84596D;
+        }
+        .box6 { 
+            grid-column:1/4;
+            grid-row: 6/7;
+            background: #faf;
+            color: #000;
+        }
+        
+    
+        
+    
+    </style></head>
+    
+    <div class="wrapper">
+        <div class="box1">
+            Welcome to KAEDE SITE
+        </div>
+        <div class="box2">
+            <a href="https://kaedeAPK.github.io/Canvas/Shooting.html">KAEDE GAMES</a>
+            <br>  まだ単調です。自動で弾が出るので避けて当ててくれ
+        </div>
+        <div class="box3">About <br>  最近プログラミングのバイトに受かりました。
+        <br>  Python楽しいです</div>
+        <div class="box4">
+            <a href="https://github.com/KaedeAPK?tab=repositories">GitHub:</a>
+        </div>
+        <div class="box5">KAEDE ANIMATION</div>
+        <div class="box6">Skill Sets: HTML5, JavaScript, Python</div>
+    </div>
+    
